@@ -7,27 +7,15 @@ class Tema {
 private:
     int id;
     std::string nome;
-    char tipo; // 'A' para acadêmico, 'P' para pessoal
+    char tipo;
 
 public:
-    // Construtor
-    Tema(int id, std::string nome, char tipo);
-    
-    // Destrutor
-    ~Tema();
-    
-    // Getters
+    Tema();
+    Tema(int _id, const std::string& _nome, char _tipo);
+
     int getId() const;
     std::string getNome() const;
     char getTipo() const;
-    
-    // Setters
-    void setNome(std::string nome);
-    void setTipo(char tipo);
-    
-    // Métodos utilitários
-    bool isAcademico() const;
-    bool isPessoal() const;
 };
 
 #endif

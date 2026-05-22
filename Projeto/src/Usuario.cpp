@@ -1,43 +1,23 @@
-#include "../include/Usuario.h"
-#include <string>
+#include "Usuario.h"
 
-// Construtor
-// Complexidade: O(1) - Atribuições simples e cópia de string
-Usuario::Usuario(int id, std::string nome, int idade) {
-    this->id = id;
-    this->nome = nome;
-    this->idade = idade;
+Usuario::Usuario(){
+    id = -1;
+    nome = "NULL";
+    idade = -1;
 }
 
-// Destrutor
-// Complexidade: O(1) - Nenhuma alocação dinâmica para liberar
-Usuario::~Usuario() {
-    // Não há alocação dinâmica para liberar
+Usuario::Usuario(int _id, const std::string& _nome, int _idade){
+    id = _id;
+    nome = _nome;
+    idade = _idade;
 }
 
-// Getters
-// Complexidade: O(1) - Acesso direto ao atributo
-int Usuario::getId() const {
+int Usuario::getId() const{
     return id;
 }
-
-// Complexidade: O(1) - Retorno de string (cópia)
-std::string Usuario::getNome() const {
+std::string Usuario::getNome() const{
     return nome;
 }
-
-// Complexidade: O(1) - Acesso direto ao atributo
-int Usuario::getIdade() const {
+int Usuario::getIdade() const{
     return idade;
-}
-
-// Setters
-// Complexidade: O(1) - Atribuição de string (cópia)
-void Usuario::setNome(std::string nome) {
-    this->nome = nome;
-}
-
-// Complexidade: O(1) - Atribuição simples
-void Usuario::setIdade(int idade) {
-    this->idade = idade;
 }

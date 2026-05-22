@@ -10,20 +10,12 @@ private:
     int idade;
 
 public:
-    // Construtor
-    Usuario(int id, std::string nome, int idade);
-    
-    // Destrutor
-    ~Usuario();
-    
-    // Getters
+    Usuario();
+    Usuario(int _id, const std::string& _nome, int _idade);
+
     int getId() const;
     std::string getNome() const;
     int getIdade() const;
-    
-    // Setters
-    void setNome(std::string nome);
-    void setIdade(int idade);
 };
 
 #endif
